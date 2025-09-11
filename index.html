@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Enter city name" class="searchbox">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        
+        <div class="weather-info">
+            <h1 class="city-name">New York</h1>
+            <p class="date">Monday, June 12</p>
+            
+            <div class="weather-icon">
+                <i class="fas fa-sun"></i>
+            </div>
+            
+            <div class="temperature">24°C</div>
+            <div class="weather-type">Sunny</div>
+            
+            <div class="weather-details">
+                <div class="humidity">
+                    <i class="fas fa-tint"></i>
+                    <div class="text">
+                        <span>78%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="wind">
+                    <i class="fas fa-wind"></i>
+                    <div class="text">
+                        <span>5.2 km/h</span>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="forecast">
+            <div class="forecast-day">
+                <p class="day">Tue</p>
+                <div class="icon"></div>
+                <p class="temp">22°C</p>
+            </div>
+            <div class="forecast-day">
+                <p class="day">Wed</p>
+                <div class="icon"></div>
+                <p class="temp">20°C</p>
+            </div>
+            <div class="forecast-day">
+                <p class="day">Thu</p>
+                <div class="icon"></div>
+                <p class="temp">18°C</p>
+            </div>
+            <div class="forecast-day">
+                <p class="day">Fri</p>
+                <div class="icon"></div>
+                <p class="temp">23°C</p>
+            </div>
+            <div class="forecast-day">
+                <p class="day">Sat</p>
+                <div class="icon"></div>
+                <p class="temp">25°C</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
