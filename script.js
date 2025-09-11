@@ -50,7 +50,7 @@ async function getweather(city) {
         // 3. Convert to JSON   
         let data = await resposne.json();
         // 4. Use the data (update UI)
-        console.log("Current Data:",  data);
+        // console.log("Current Data:",  data);
     
         if (data.error) {
             alert("City not found. Please try again!");
@@ -77,7 +77,7 @@ async function forecast(city) {
         let url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5&aqi=no&alerts=no`;
         let response = await fetch(url);
         let data = await response.json();
-        console.log("Forecast data:", data.forecast.forecastday);
+        // console.log("Forecast data:", data.forecast.forecastday);
 
          if (data.error) {
             alert("City not found. Please try again!");

@@ -133,10 +133,12 @@ body {
 
 .forecast {
     display: flex;
-    justify-content: space-between;
-    padding: 0 15px 20px;
-    overflow-x: auto;
-    scrollbar-width: thin;
+    justify-content: space-between; 
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 10px;
 }
 
 .forecast::-webkit-scrollbar {
@@ -149,13 +151,10 @@ body {
 }
 
 .forecast-day {
-    min-width: 65px;
-    text-align: center;
-    padding: 10px 5px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 15px;
-    margin: 0 5px;
-    transition: all 0.3s ease;
+    flex-grow: 1; 
+    text-align: center; 
+    margin: 0 5px; 
+    min-width: 60px; 
 }
 
 .forecast-day:hover {
