@@ -91,7 +91,7 @@ async function forecast(city) {
     
                 let card = forecastCards[index];
                 card.querySelector('.day').innerHTML = weekday;
-                card.querySelector('.temp').innerHTML = dayData.day.maxtemp_c + "°C";
+                card.querySelector('.temp').innerHTML = `${dayData.day.maxtemp_c}°C / ${dayData.day.mintemp_c}°C`;
                 card.querySelector('.icon').innerHTML = `<img src="https:${dayData.day.condition.icon}" alt="icon">`;
             }
         });
