@@ -23,7 +23,7 @@ search.addEventListener('click', function(){
         getweather(input.value);
         forecast(input.value);
     }
-    
+    input.value = '';
     // console.log(input.value);
 })
 
@@ -39,6 +39,7 @@ input.addEventListener('keyup' ,function() {
             getweather(input.value);
             forecast(input.value);
         }
+        input.value = '';
     }
 })
 
@@ -67,7 +68,7 @@ async function getweather(city) {
         humidity.innerHTML = data.current.humidity + "%";
         wind.innerHTML = data.current.wind_kph + " km/h";
         aqi.innerHTML = data.current.air_quality["us-epa-index"];
-        console.log(aqi);
+        // console.log(aqi);
         icon.innerHTML = `<img src="https:${data.current.condition.icon}" alt="weather icon">`;
     } catch(error) {
         alert("Failed to fetch weather data. Please check your internet connection.");
