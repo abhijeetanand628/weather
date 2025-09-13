@@ -112,7 +112,7 @@ body {
     margin: 15px 20px;
 }
 
-.humidity, .wind {
+.humidity, .wind, .aqi {
     display: flex;
     align-items: center;
 }

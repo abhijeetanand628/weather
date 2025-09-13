@@ -6,6 +6,7 @@ const temp = document.querySelector('.temperature');
 const weather = document.querySelector('.weather-type');
 const humidity = document.querySelector('.humidity span');
 const wind = document.querySelector('.wind span');
+const aqi = document.querySelector('.aqi span');
 const icon = document.querySelector('.weather-icon');
 const forecastCards = document.querySelectorAll('.forecast-day');
 
@@ -44,7 +45,7 @@ input.addEventListener('keyup' ,function() {
 async function getweather(city) {
     try {
         // 1. Build the URL with city name and your key
-        let url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
+        let url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`;
         // 2. Fetch the data
         let resposne = await fetch(url);
         // 3. Convert to JSON   
@@ -65,6 +66,8 @@ async function getweather(city) {
         weather.innerHTML = data.current.condition.text;
         humidity.innerHTML = data.current.humidity + "%";
         wind.innerHTML = data.current.wind_kph + " km/h";
+        aqi.innerHTML = data.current.air_quality["us-epa-index"];
+        console.log(aqi);
         icon.innerHTML = `<img src="https:${data.current.condition.icon}" alt="weather icon">`;
     } catch(error) {
         alert("Failed to fetch weather data. Please check your internet connection.");
