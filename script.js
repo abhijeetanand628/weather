@@ -61,7 +61,7 @@ async function getweather(city) {
         const localTime = data.location.localtime;
         const dayOfWeek = new Date(localTime).toLocaleDateString('en-US', { weekday: 'long' });
         date.innerHTML = `${localTime}<br>${dayOfWeek}`;
-        temp.innerHTML = data.current.temp_c + "°C";
+        temp.innerHTML = Math.round(data.current.temp_c) + "°C";
         weather.innerHTML = data.current.condition.text;
         humidity.innerHTML = data.current.humidity + "%";
         wind.innerHTML = data.current.wind_kph + " km/h";
@@ -91,7 +91,7 @@ async function forecast(city) {
     
                 let card = forecastCards[index];
                 card.querySelector('.day').innerHTML = weekday;
-                card.querySelector('.temp').innerHTML = `${dayData.day.maxtemp_c}°C / ${dayData.day.mintemp_c}°C`;
+                card.querySelector('.temp').innerHTML = `${Math.round(dayData.day.maxtemp_c)}°C / ${Math.round(dayData.day.mintemp_c)}°C`;
                 card.querySelector('.icon').innerHTML = `<img src="https:${dayData.day.condition.icon}" alt="icon">`;
             }
         });
